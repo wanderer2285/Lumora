@@ -7,6 +7,9 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 const courseRoutes = require('./routes/courseRoutes');
 const lessonRoutes = require("./routes/lessonRoutes");
+const enrollmentRoutes = require("./routes/enrollmentRoutes");
+const progressRoutes = require("./routes/progressRoutes");
+
 
 // Middleware
 app.use(cors());
@@ -16,6 +19,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use('/api/courses', courseRoutes);
 app.use("/api/courses/:courseId/lessons", lessonRoutes);
+app.use("/api", enrollmentRoutes);
+app.use("/api", progressRoutes);
 
 // Root Route
 app.get("/", (req, res) => {
