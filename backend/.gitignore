@@ -1,0 +1,17 @@
+# Environment variables
+.env
+.env.local
+.env.*
+
+# Node
+node_modules/
+
+# Prisma
+prisma/dev.db
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
